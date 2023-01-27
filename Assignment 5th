@@ -1,0 +1,90 @@
+//concatenate array//
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    int n,m,p;
+    cout<<"Size of 2 arrays"<<endl;
+    cin>>n;
+    cin>>m;
+    p = n+m;
+    int arr[n] , arr2[m];
+    int arr3[n+m];
+    
+    cout<<"1st array"<<endl;
+    for(int i = 0 ;i<n;i++){
+        cin>>arr[i];
+    }
+    cout<<"2nd array"<<endl;
+    for(int i = 0 ;i<m;i++){
+        cin>>arr2[i];
+    }
+    
+    copy(arr , arr+ n , arr3);
+    copy(arr2 , arr2+ m , arr3 + n);
+    
+    cout<<"concatenated array"<<endl;
+    for(int i = 0; i<n+m ;i++){
+        cout<<arr3[i]<<" ";
+    }
+    return 0;
+}
+
+//Running sum//
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Size"<<endl;
+    cin>>n;
+    
+    int arr[n];
+    cout<<"Elements"<<endl;
+    for(int i = 0 ; i<n;i++){
+        cin>>arr[i];
+    }
+    int count = 0;
+    
+    cout<<"Running sum"<<endl;
+    for(int i = 0;i<n;i++){
+        count = count + arr[i];
+        cout<<count<<" ";
+    }
+
+    return 0;
+}
+
+//3 ques//
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Size"<<endl;
+    cin>>n;
+    
+    int arr[n];
+    cout<<"Elements"<<endl;
+    for(int i = 0 ; i<n;i++){
+        cin>>arr[i];
+    }
+    for(int i=0;i<n;i++){
+        int count =0;
+        for(int j=0; j<n;j++){
+            if(arr[i]>arr[j])
+            count++;
+        }
+        cout<<count<<" ";
+    }
+
+    return 0;
+}
+
+//4 ques//
