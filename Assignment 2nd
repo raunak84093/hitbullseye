@@ -1,0 +1,186 @@
+//Write a C++ Program to find Factorial of a number using class.//
+#include <iostream>
+using namespace std;
+
+class Factorial {
+    private :
+    int num ;
+    int f=1;
+    public :
+    void fact();
+    void show();
+};
+    void Factorial::fact(){
+        cout<<"Enter your number "<<endl;
+        cin>>num;
+        if(num ==1 || num ==0){
+            f = 1;
+        }
+        else {
+            for(int i =1;i<=num;i++){
+                f = f *i;
+            }
+        }
+    }
+    void Factorial::show () {
+        cout<<"Factorial of number is  "<<endl<<f;
+    }
+int main(){
+    Factorial f1;
+    f1.fact();
+    f1.show();
+    return 0;
+}
+//Write a C++ program to find Reverse of a Number using class.//
+
+#include <iostream>
+using namespace std;
+class  Reverse {
+    private:
+    int num;
+    int remain;
+    int reversed_number =0;
+    public :
+    void rev();
+    void show();
+};
+void Reverse::rev() {
+    cout<<"Enter a number"<<endl;
+    cin>>num;
+    while(num != 0) {
+    remain = num % 10;
+    reversed_number = reversed_number * 10 + remain;
+    num /= 10;
+    }
+}
+void Reverse::show(){
+    cout << "Reversed Number = " << reversed_number;
+}
+int main(){
+    Reverse r1;
+    r1.rev();
+    r1.show();
+    
+    return 0;
+}
+//Write a C++ program to Add two Complex number passing objects to function//
+class complex{
+    public:
+    int real;
+    int img;
+    complex(int a,int b):real(a),img(b){
+    }
+    void sum(complex &b){
+        cout<<"sum of these two complex number is:"
+        <<(real+b.real)<<"+"<<(img+b.img)<<"i";
+    }
+};
+//Write a C++ Program to find Largest among 3 numbers using classes//
+#include <iostream>
+using namespace std;
+class Largest{
+    private:
+    int a,b,c;
+    public:
+    void greatest();
+};
+void Largest::greatest(){
+    cout<<"Enter the three numbers"<<endl;
+    cin>>a;
+    cin>>b;
+    cin>>c;
+    int n=0;
+    if(a>b){
+        if(a>c){
+            n=a;
+        }
+        else {
+            if(b>c){
+                n=b;
+            }
+            else {
+                n=c;
+            }
+        }
+    }
+    cout<<"Largest Number"<<<<endl<<n<<;
+}
+int main(){
+    Largest L;
+    L.greatest();
+    
+    return 0;
+}
+//Write a C++ Program to find Sum of odd numbers between 1 and 100 using class//
+#include <iostream>
+using namespace std;
+class Odd{
+    private:
+    int n = 100;
+    
+    public:
+    void sum();
+};
+void Odd::sum(){
+    int p=0;
+    
+    for(int i =1;i<=n;i++){
+        if(i%2!=0){
+            p = p+i;
+        }
+    }
+    cout<<"Sum of odd numbers from 1 to 100 is "<<p;
+}
+int main(){
+    Odd L;
+    L.sum();
+    
+    return 0;
+}
+//Write a C++ Program to Print Numbers from 1 to n using class//
+#include <iostream>
+using namespace std;
+class Number {
+    private:
+    int n;
+    public:
+    void print();
+};
+void Number::print() {
+    cout<<"Enter number"<<endl;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        cout<<i<<endl;
+    }
+}
+int main()
+{
+    Number N;
+    N.print();
+    return 0;
+}
+//Write a C++ program to Swap two numbers using class//
+#include <iostream>
+using namespace std;
+class Swap {
+    private:
+    int n;
+    int m;
+    public:
+    void show();
+};
+void Swap::show() {
+    cout<<"Enter two number"<<endl;
+    cin>>n;
+    cin>>m;
+    int temp = m;
+    m = n;
+    n = temp;
+    cout<<"Swapped numbers are "<<n<<endl<<m<<endl;
+ }
+int main()
+{
+    Swap N;
+   N.show();
+return 0;
+}
